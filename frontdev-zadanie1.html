@@ -1,29 +1,50 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>Blog</title>
-    </head>
-    <body>
-        <header id="blogHeader">Mój programistyczny blog</header>
-        <main>
-            <article>
-                <header>
-                    <h1></h1>
-                </header>
-                <p></p>
-            </article>
-        </main>
-        <section>
-            <form method="post" action="">
-                <label for="topic">temat</label>
-                <input type="text" id="topic" name="topic">
-                <label for="contactEmail">email</label>
-                <input type="email" id="contactEmail" name="email">
-                <label for="contactText">Treść wiadmości</label>
-                <textarea name="" id="contactText" cols="30" rows="10"></textarea>
-            </form>
-        </section>
-        <footer id="blogFooter"></footer>
-    </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>HTML 5 BASICS</title>
+</head>
+
+<body>
+  <header id="blogHeader"><h1>Mój programistyczny blog</h1></header>
+  <main id="blogContent">
+    <article>
+      <header>
+        <img src="img/html5-semantics.png" alt="html5-semantics">
+        <h2>What is semantic HTML5?</h2>
+        <p>Posted on <time datetime="2018-03-04T16:31:24+02:00">Marz 11th 2018</time>
+      </header>
+      <p>A semantic element clearly describes its meaning to both the browser and the developer.Examples of non-semantic elements: &lt;div&gt; and &lt;span&gt; - Tells nothing about its content. Examples of semantic elements: &lt;form&gt;, &lt;table&gt;, and &lt;article&gt; - Clearly defines its content.
+      </p>
+      <p>
+        HTML5 semantic elements are supported in all modern browsers. In addition, you can "teach" older browsers how to handle "unknown elements". Read about it in HTML5 Browser Support.
+      </p>
+      <p>
+        Many web sites contain HTML code like: <div id="nav"> <div class="header"> <div id="footer">
+        to indicate navigation, header, and footer.
+        HTML5 offers new semantic elements to define different parts of a web page:
+      </p>
+        <ul>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article">&lt;article&gt;</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section">&lt;section&gt;</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside">&lt;aside&gt;</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer">&lt;footer&gt;</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header">&lt;header&gt;</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main">&lt;main&gt;</a></li>
+        </ul>
+        <img src="img/img_sem_elements.gif" alt="html5 semantic elements">
+    </article>
+  </main>
+  <form method="post" action="">
+    <label for="topic">temat</label>
+    <input type="text" id="topic" name="topic">
+    <label for="contactEmail">email</label>
+    <input type="email" id="contactEmail" name="email">
+    <label for="contactText">Treść wiadmości</label>
+    <textarea name="" id="contactText" cols="30" rows="10"></textarea>
+  </form>
+  <footer id="blogFooter">HTML 5 &copy 2018</footer>
+</body>
+
 </html>
