@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <title>HTML 5 BASICS</title>
   <meta charset="UTF-8" />
@@ -9,7 +8,6 @@
   <meta name="author" content="Miroslaw Lasek">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
 <body>
   <header id="blogHeader">
     <h1>Frontend blog</h1></header>
@@ -63,6 +61,25 @@
         frameworks all in all.</p>
       <p><a href="https://vuejs.org/">Vue.js</a> is a better choice for quick development of cross-platform solutions. It can become a firm basis for high-end single page applications (SPAs) and beneficial solution to those cases, when performance is put
         ahead of good code organization or app structure.</p>
+    </article>
+    <article>
+      <header>
+        <img src="img/mobile-first.png" alt="mobile-first">
+        <h2>CSS Media Queries</h2>
+        <p>Posted on <time datetime="2018-03-11T16:31:24+02:00">Marz 11th 2018</time>
+      </header>
+      <p>CSS media queries allow you to apply different sets of CSS rules based on conditions like browser width or device type.</p>
+      <p>Most commonly, media queries are used to create a responsive design, where different CSS styling is applied to different screen sizes. This lets designers craft sites that are pleasant to use and easy to read – even on very small screens – without creating completely separate mobile websites or themes</p>
+      <h4><strong>Basic Example</strong></h4>
+      <p>Here is an example of a media query that hides the custom header image in the Twenty Fourteen theme for screen sizes smaller than 800 pixels wide:</p>
+      <code>
+        @media screen and (max-width: 800px) {
+            #site-header {
+                display: none;
+            }
+        }
+      </code>
+      <p>The CSS inside the @media rule example above only works in the mobile- and tablet-sized previews. It doesn’t apply to the desktop-sized preview because the desktop browser width is larger than 800px.</p>
     </article>
   </main>
   <form id="contactForm" method="post" action="">
