@@ -1,0 +1,45 @@
+/* GLOBALS */
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+body {
+    background: #C63D0F;
+}
+
+div.container {
+    width: 70%;
+    margin: 0 auto;
+    background: #FDF3E7;
+}
+
+.text-gray {
+    color: #3B3738;
+}
+
+/* HEADER */
+#blogHeader {
+    border-top: solid #C63D0F 2rem;
+    border-bottom: solid #C63D0F 2rem;
+    padding: 4rem;
+    margin-bottom: 20%;
+    margin: 0 auto;
+    font-family: 'Helvetica Neue',sans-serif;
+    font-size: 70px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+}
+
+h1.centred-text {
+    text-align: center;
+}
+
+
+/* MAIN */
+#blogContent {
+    width: 80%;
+    margin: 3rem auto;
+}

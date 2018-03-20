@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML 5 BASICS</title>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Frondtend blog">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="Miroslaw Lasek">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header id="blogHeader">
+<h1 class="centred-text text-gray">Frontend blog</h1></header>
+    <main id="blogContent">
+      <article>
+        <header>
+          <img src="img/html5-semantics.png" alt="html5-semantics">
+          <h2>What is semantic HTML5?</h2>
+          <p>Posted on <time datetime="2018-03-11T16:31:24+02:00">Marz 11th 2018</time>
+        </header>
+        <p>A semantic element clearly describes its meaning to both the browser and the developer.Examples of non-semantic elements: &lt;div&gt; and &lt;span&gt; - Tells nothing about its content. Examples of semantic elements: &lt;form&gt;, &lt;table&gt;,
+          and &lt;article&gt; - Clearly defines its content.
+        </p>
+        <p>
+          HTML5 semantic elements are supported in all modern browsers. In addition, you can "teach" older browsers how to handle "unknown elements". Read about it in HTML5 Browser Support.
+        </p>
+        <p>
+          Many web sites contain HTML code like: &lt;div id="nav"&gt; &lt;div class="header"&gt; &lt;div id="footer"&gt; to indicate navigation, header, and footer. HTML5 offers new semantic elements to define different parts of a web page:
+        </p>
+        <ul>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article">&lt;article&gt;</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section">&lt;section&gt;</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside">&lt;aside&gt;</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer">&lt;footer&gt;</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header">&lt;header&gt;</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/main">&lt;main&gt;</a></li>
+          <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav">&lt;nav&gt;</a></li>
+        </ul>
+        <img src="img/img_sem_elements.gif" alt="html5 semantic elements">
+      </article>
+      <article>
+        <header>
+          <img src="img/js-frameworks.jpg" alt="js frameworks">
+          <h2>Best JavaScript Frameworks in 2018</h2>
+          <p>Posted on <time datetime="2018-03-11T16:31:24+02:00">Marz 11th 2018</time>
+        </header>
+        <p>Undoubtedly, JavaScript’s (JS) popularity among the developer community has grown enormously over the years. The reason is its ability to allow developers to design and modify web pages in numerous ways and even add functionalities to web apps real-time.
+          JavaScript is gathering attention not just for its simplicity and ease of use but also due to what it brings to the table—Efficiency, Security, and Low-cost results.</p>
+
+        <p>At the same time, advancing technologies are pushing techies to add new skills to their repository for JS. Here we have listed top 3 best JavaScript frameworks that you must keep an eye on, in 2018:</p>
+        <h4><strong>Angular</strong></h4>
+        <p>Angular.js is often referred to as an MVW (Model-View-Whatever) framework and among the top benefits, for startups and mid-sized companies, people name: quick code production, easy testing of any app part and two-way data binding (changes in the
+          backend are immediately reflected on the UI). Since release its ecosystem has gone beyond imagination. As for now, it is reasonably called the most used JS framework for <a href="https://en.wikipedia.org/wiki/Single-page_application">SPAs</a>        (Single-Page Applications) development and it boasts the largest community of developers.</p>
+        <h4><stron>ReactJS</stron></h4>
+        <p>It is rightly considered the fastest growing JS framework: as of today, there are about 1,000 contributors on <a href="https://github.com/facebook/react">Github</a>. In MVC (Model-View-Controller) pattern React.js acts as “V” and can be smoothly
+          integrated with any architecture. Due to the usage of virtual DOM it provides a great performance boost, comparing to Angular 1.x. In addition to that, React components can be created and re-used among applications or even transferred for public
+          use.
+        </p>
+        <h4><strong>Vue js</strong></h4>
+        <p>Going deeper, Vue.js offers two-way data binding (seen in AngularJS), server-side rendering (like in Angular2 and ReactJS), Vue-cli (scaffolding tool for quick start) and optional JSX support. Its founder states that Vue 2 is one of the fastest
+          frameworks all in all.</p>
+        <p><a href="https://vuejs.org/">Vue.js</a> is a better choice for quick development of cross-platform solutions. It can become a firm basis for high-end single page applications (SPAs) and beneficial solution to those cases, when performance is put
+          ahead of good code organization or app structure.</p>
+      </article>
+      <article>
+        <header>
+          <img src="img/mobile-first.png" alt="mobile-first">
+          <h2>CSS Media Queries</h2>
+          <p>Posted on <time datetime="2018-03-11T16:31:24+02:00">Marz 11th 2018</time>
+        </header>
+        <p>CSS media queries allow you to apply different sets of CSS rules based on conditions like browser width or device type.</p>
+        <p>Most commonly, media queries are used to create a responsive design, where different CSS styling is applied to different screen sizes. This lets designers craft sites that are pleasant to use and easy to read – even on very small screens – without creating completely separate mobile websites or themes</p>
+        <h4><strong>Basic Example</strong></h4>
+        <p>Here is an example of a media query that hides the custom header image in the Twenty Fourteen theme for screen sizes smaller than 800 pixels wide:</p>
+        <code>
+          @media screen and (max-width: 800px) {
+              #site-header {
+                  display: none;
+              }
+          }
+        </code>
+        <p>The CSS inside the @media rule example above only works in the mobile- and tablet-sized previews. It doesn’t apply to the desktop-sized preview because the desktop browser width is larger than 800px.</p>
+      </article>
+    </main>
+    <form id="contactForm" method="post" action="">
+      <label for="topic">topic</label>
+      <input type="text" id="topic" name="topic">
+      <label for="contactEmail">email</label>
+      <input type="email" id="contactEmail" name="email">
+      <label for="contactText">Text</label>
+      <textarea name="" id="contactText" cols="30" rows="10"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+    <footer id="blogFooter">HTML 5 &copy 2018</footer>
+  </div>
+</body>
+
+</html>
