@@ -194,10 +194,12 @@ html {
   margin-left: auto;
   margin-right: auto;
   font-size: 8rem;
+  transition: transform 0.5s ease;
 }
 
 .play-circle:hover {
   cursor: pointer;
+  transform: scale(0.8);
 }
 
 /* IMAGES */
@@ -212,6 +214,10 @@ html {
   display: flex;
   justify-content: center;
   align-items: flex-end
+}
+
+.img:hover {
+  opacity: 0.8;
 }
 
 .img--1 {
@@ -286,6 +292,10 @@ html {
   font-style: italic;
   line-height: 2.6rem;
   text-align: left;
+}
+
+.contact-list_item a:hover {
+  color: #222;
 }
 
 .column__paragraph {
