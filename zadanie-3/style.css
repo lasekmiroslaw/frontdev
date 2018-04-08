@@ -1,0 +1,159 @@
+html {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  box-sizing: border-box;
+  font-family: Montserrat;
+  border: 0;
+  color: #fff;
+}
+
+/* CONTAINERS */
+
+.container {
+  display: flex;
+}
+
+.container--column {
+  flex-direction: column;
+}
+
+.container--img {
+  background-image: url("img/main.jpg");
+  background-repeat: no-repeat;
+  height: 128rem;
+  position: relative;
+  align-content: space-between;
+}
+
+.container--center {
+  justify-content: center;
+  align-items: center;
+}
+
+/* NAV */
+
+.nav {
+  display: flex;
+  height: 20rem;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: .1rem solid rgba(255, 255, 255, 0.24);
+  align-items: center;
+}
+
+.nav__circle {
+  border-radius: 50%;
+  background-color: rgba(0, 227, 254, 0);
+  border: .3rem solid #ffffff;
+  width: 4rem;
+  height: 4rem;
+  margin-right: auto;
+}
+
+.nav__list {
+  display: flex;
+}
+
+.nav__list__list-item {
+  padding-right: 1rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.nav__list__list-item:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.nav__right {
+  margin-left: auto;
+  display: flex;
+}
+
+.nav__right__search {
+  font-size: 2.4rem;
+  margin-right: 5rem;
+}
+
+.nav__right__search:hover {
+  cursor: pointer;
+}
+
+.nav__mobile-menu:hover {
+  cursor: pointer;
+}
+
+.nav__mobile-menu:hover .nav__mobile-menu__short {
+  width: 3.4rem;
+  margin-left: 0;
+  background: red;
+}
+
+.nav__mobile-menu__long {
+  border-top: .4rem solid #fff;
+  width: 3.4rem;
+}
+
+.nav__mobile-menu__short {
+  width: 3rem;
+  border-top: .4rem solid #fff;
+  margin: .5rem 0 .5rem .4rem;
+  transition: all 0.5s ease-out;
+}
+
+/* HEADER */
+
+.header__large-text {
+  font-family: 'Playfair Display';
+  font-size: 14rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+.header__paragraph {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 3.4rem;
+  text-align: center;
+  width: 54rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center-button {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.center-button__button {
+  background-color: #da7074;
+  width: 16rem;
+  height: 4.6rem;
+  border-radius: 4rem;
+  font-size: 1.4em;
+  font-weight: 700;
+  z-index: 2;
+}
+
+.center-button__button:hover {
+  cursor: pointer;
+  background-color: #ee7074;
+}
+
+@media all and (max-width: 480px) {
+  .nav__list {
+    display: none;
+  }
+  .nav {
+    height: 10rem;
+  }
+}
+
+@media all and (max-width: 768px) {}
+
+@media all and (max-width: 991px) {}
