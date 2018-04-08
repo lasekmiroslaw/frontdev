@@ -141,8 +141,8 @@ html {
 
 .center-button__button {
   background-color: #da7074;
-  width: 16rem;
-  height: 4.6rem;
+  width: 16em;
+  height: 4.6em;
   border-radius: 4em;
   font-size: 1.4em;
   font-weight: 700;
@@ -152,6 +152,10 @@ html {
 .center-button__button:hover {
   cursor: pointer;
   background-color: #ee7074;
+}
+
+.center-button__text {
+  font-size: 1.4em;
 }
 
 .center-button__horizontal-line {
@@ -192,10 +196,6 @@ html {
   font-size: 8rem;
 }
 
-.pause-circle {
-  visibility: hidden;
-}
-
 .play-circle:hover {
   cursor: pointer;
 }
@@ -215,24 +215,24 @@ html {
 }
 
 .img--1 {
-    background-image: url("img/first.jpg");
+  background-image: url("img/first.jpg");
 }
 
 .img--2 {
-    background-image: url("img/second.jpg");
+  background-image: url("img/second.jpg");
 }
 
 .img--3 {
-    background-image: url("img/third.jpg");
+  background-image: url("img/third.jpg");
 }
 
 .img--4 {
-    background-image: url("img/fourth.jpg");
+  background-image: url("img/fourth.jpg");
 }
 
 .img__div {
   margin-bottom: 30%;
-    text-align: center;
+  text-align: center;
 }
 
 .img__h4 {
@@ -250,7 +250,7 @@ html {
 
 /* INFO */
 
-.container-info{
+.container-info {
   display: flex;
   align-items: center;
 }
@@ -282,7 +282,7 @@ html {
   text-decoration: none;
   font-family: Georgia;
   color: #565656;
-  font-size: 1.4rem;
+  font-size: 1.4em;
   font-style: italic;
   line-height: 2.6rem;
   text-align: left;
@@ -291,7 +291,7 @@ html {
 .column__paragraph {
   font-family: Georgia;
   color: #575757;
-  font-size: 1.4rem;
+  font-size: 1.4em;
   font-style: italic;
   line-height: 2.6rem;
   text-align: left;
@@ -313,9 +313,16 @@ html {
   margin: auto;
 }
 
-@media all and (max-width: 991px) {
+@media all and (max-width: 960px) {
   html {
-    font-size: 50%;
+    font-size: 55%;
+  }
+  .images {
+    flex-wrap: wrap;
+  }
+  .img {
+    flex-basis: 50%;
+    width: 50vw;
   }
 }
 
@@ -356,7 +363,6 @@ html {
   html {
     font-size: 30%;
   }
-
   .container--img {
     max-height: 100vh;
   }
@@ -397,5 +403,20 @@ html {
   }
   .colum_div .column__paragraph {
     width: 100%;
+  }
+  .contact-list_item a {
+    font-size: 2rem;
+  }
+  .column__paragraph {
+    font-size: 2rem;
+  }
+  .column__header {
+    font-size: 2rem;
+  }
+  .img__h4 {
+    font-size: 4rem;
+  }
+  .img__h5 {
+    font-size: 3rem;
   }
 }
