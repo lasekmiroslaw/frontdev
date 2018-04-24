@@ -1,100 +1,23 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Todo localstorage</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
 </head>
+
 <body>
     <div id="app">
         <form id="todo-form">
-            <input id="todo-text" class="todo-input" type="text" placeholder="What nedds to be done?">
+            <input id="todo-text" class="todo-input" type="text" placeholder="What needs to be done?">
         </form>
         <ul class="todo-list">
         </ul>
     </div>
+
+    <script src="app.js"></script>   
 </body>
-<script>
-
-var form = document.getElementById('todo-form');
-var input = document.getElementById('todo-text');
-var list = document.querySelector('.todo-list');
-var index = 0;
-
-var items = loadItems();
-
-form.addEventListener('submit', addNewItem);
- 
-    function loadItems() {
-        var items = localStorage.getItem('items');  
- console.log(localStorage.getItem('items'))
-        if(items !== null) {
-            items = items.split(",");
-
-            for(i=0; i<items.length; i++) {
-                var li = document.createElement('li');
-                var textNode = document.createTextNode(items[i]); 
-
-                li.appendChild(textNode);
-                li.setAttribute("id", index++);
-
-                list.appendChild(li);
-
-                addRemoveBtn(li);           
-            }
-        } else {
-            var items = [];
-        }
-
-        return items;
-    }
-
-    function addNewItem(event) {
-        event.preventDefault();
-        if(input.value === '') return
-
-        addListItem();
-    }
-
-    function addListItem() {
-        var li = document.createElement('li');
-        var textNode = document.createTextNode(input.value);
-
-        li.appendChild(textNode);
-
-        items.push(li.innerText)
-
-        localStorage.setItem('items', items);
-        li.setAttribute('index', index++);
-
-        list.appendChild(li);
-
-        addRemoveBtn(li);
-
-        input.value = '';
-    }
-
-    function addRemoveBtn(li) {
-        var btn = document.createElement('button');
-        var btnText = document.createTextNode('remove'); 
-
-        btn.appendChild(btnText)
-        btn.addEventListener('click', function(){
-            if (confirm('Czy napewno usunąć: ' + li.childNodes[0].textContent)) {
-                items.splice(li.getAttribute('id', 1))
-                li.remove();
-                localStorage.setItem('items', items);
-                if(items.length === 0) {
-                    localStorage.removeItem('items')
-                }
-            }
-        });
-        li.appendChild(btn);
-     }
-
-</script>
 </html>
-
