@@ -1,0 +1,1 @@
+export const averageTemperature = (temperatures, length) => Math.round(temperatures/length);
