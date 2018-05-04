@@ -2,13 +2,15 @@ import cityList from './city-list.json';
 import { getCityWeather } from './open-weather.js';
 import { elementWithTextFactory } from './helpers';
 import { nestedElementFactory } from './helpers';
+import { getFromLocalStorage } from './local-storage-communication';
+import { setToLocalStorage } from './local-storage-communication';
 
-document.getElementById('search-city').addEventListener('change', search)
+document.getElementById('search-form').addEventListener('submit', search)
 
-function search() {
+function search(e) {
+    e.preventDefault();
     const val = document.getElementById('search-city').value.toLowerCase();
     if (val === '') return;
-    clearList();
 
     const results = cityList.filter((city) => {
         return city.name.toLowerCase() === val;
@@ -38,8 +40,16 @@ function appendResults(results) {
         const searchItem = nestedElementFactory('li', searchLink)
 
         searchItem.addEventListener('click', function () {
-            getCityWeather(element.id);
+            clearList();
+            const isInArray = getFromLocalStorage().some(storageItem => Object.keys(storageItem)[0] == element.id);
+            if(isInArray) {
+                document.getElementById('message').innerHTML = 'Wybrane miasto już jest na liście' 
+                return;
+            }
+
+            getCityWeather(element.id)
         })
+
         document.getElementById('search-list').appendChild(searchItem);
     });
 }
