@@ -1,9 +1,5 @@
-import { elementWithTextFactory } from './helpers';
-import { nestedElementFactory } from './helpers';
-import { appendChildren } from './helpers';
-import { addDeleteBtn } from './open-weather';
-
-export const cityTemperature = getFromLocalStorage();
+import { createEletementWithText, appendChildren } from './helpers';
+import { addDeleteBtn } from './button';
 
 export function getFromLocalStorage() {
     const items = JSON.parse(localStorage.getItem('cityTemperature') || "[]");
@@ -19,9 +15,9 @@ export function appendFromLocalStorage() {
         const tableBody = document.getElementById('weather-body');
         const tr = document.createElement('tr');
 
-        const tdIndex = elementWithTextFactory('td');
-        const tdCity = elementWithTextFactory('td', storageItem[id].city);
-        const tdTemperature = elementWithTextFactory('td', storageItem[id].temperature);
+        const tdIndex = createEletementWithText('td');
+        const tdCity = createEletementWithText('td', storageItem[id].city);
+        const tdTemperature = createEletementWithText('td', storageItem[id].temperature);
         const tdBtn = addDeleteBtn(id);
 
         appendChildren(tr, tdIndex, tdCity, tdTemperature, tdBtn);
@@ -31,6 +27,7 @@ export function appendFromLocalStorage() {
 }
 
 export function setToLocalStorage(item) {
+    const cityTemperature = getFromLocalStorage()
     cityTemperature.push(item);
 
     localStorage.setItem('cityTemperature', JSON.stringify(cityTemperature));
@@ -42,6 +39,6 @@ export function deleFromLocalStorage(id) {
             return storageItem
         };
     });
-    console.log(restValues)
+
     localStorage.setItem('cityTemperature', JSON.stringify(restValues));
 }

@@ -2,6 +2,12 @@
     margin: 0;
     padding: 0;
     list-style-type: none;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 12px;
+}
+
+body {
+    background: #f3f4f6;
 }
 
 .container {
@@ -10,10 +16,25 @@
     width: 50%;
     margin-right: auto;
     margin-left: auto;
+    margin-top: 20vh;
+}
+
+.weather-container {
+    width: 400px;
 }
 
 .row {
     display: flex;
+}
+
+.weather-table {
+    width: 100%;
+    border-collapse:collapse;
+    margin-top: 10px;
+}
+
+thead {
+    text-align: left;
 }
 
 #weather-body {
@@ -24,10 +45,96 @@
     counter-increment: row;
 }
 
+#weather-body td:last-child {
+    text-align: right;
+    width: 20%;
+    padding-right: 0;
+}
+
+#weather-body td:first-child {
+    font-weight: bold;
+    width: 10%;
+}
+
 #weather-body td:first-child::before {
     content: counter(row);
 }
 
-.hide {
-    display: none;
+td, th {
+    border-top: 1px solid #d9dfe7;
+    height: 35px;
+    padding-right: 5%;
+    font-weight: 300;
+}
+
+th {
+    height: 50px;
+    font-weight: 700;
+}
+
+th:last-child {
+    width: 20%;
+}
+
+#search-form {
+    width: 400px;
+    display: flex;
+    justify-content: space-between;
+    height: 30px;
+}
+
+#search-city {
+    width: 60%;
+    border-radius: 4px;
+    border: 1px solid #e0e4ea;
+}
+
+#search-city {
+    padding-left: 5%;
+}
+
+#search-list {
+    white-space: nowrap;
+}
+
+#search-list > li {
+    padding: 5px;
+}
+
+#search-list>li > a:hover {
+    cursor: pointer;
+    background-color: #e0e4ea;
+}
+
+.blue-btn {
+    background-color: #2870d4;
+    border-radius: 5px;
+    width: 30%;
+    border: none;
+    color: #fff;
+}
+
+.blue-btn:hover {
+    background-color: #2992e6;
+    cursor: pointer;
+}
+
+.btn-outline-red {
+    border: 1px solid #FF0000;
+    border-radius: 5px;
+    color: #FF0000;
+    background: none;
+    width: 100%;
+    height: 75%;;
+}
+
+.btn-outline-red:hover {
+    color: rgba(255, 0, 0, 0.404);
+    cursor: pointer;
+}
+
+.disabled {
+    background: #d9dfe7;
+    color: #fff;
+    border: 1px solid #e0e4ea;
 }

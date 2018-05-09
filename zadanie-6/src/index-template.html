@@ -6,29 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Prognoza Twojego miasta</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&amp;subset=latin-ext" rel="stylesheet">
 </head>
 
 <body>
     <div class="container">
-        <div class="row">
-            <form id="search-form">
-                <input id="search-city" type="text">
-                <button>Dodaj</button>
-            </form>
+        <div class="weather-container">
+            <div class="row">
+                <form id="search-form">
+                    <input id="search-city" type="text" placeholder="Nazwa miasta">
+                    <button id="search-btn" class="blue-btn">Dodaj</button>
+                </form>
+            </div>
+            <div class="row" id="message"></div>
+            <ul id="search-list"></ul>
+            <table class="weather-table">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Miasto</th>
+                        <th>Średnia prognozowana temperatura</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="weather-body">
+                </tbody>
+            </table>
         </div>
-        <div class="row" id="message"></div>
-        <ul id="search-list"></ul>
-        <table class="weather-table">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Miasto</th>
-                    <th>Średnia prognozowana temperatura</th>
-                </tr>
-            </thead>
-            <tbody id="weather-body">
-            </tbody>
-        </table>
     </div>
 </body>
 

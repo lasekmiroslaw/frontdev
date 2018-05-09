@@ -1,4 +1,4 @@
-export function elementWithTextFactory(element, text = '') {
+export function createEletementWithText(element, text = '') {
     const elementBody = document.createElement(element);
     const elementText = document.createTextNode(text);
     elementBody.appendChild(elementText)
@@ -6,7 +6,7 @@ export function elementWithTextFactory(element, text = '') {
     return elementBody;
 }
 
-export function nestedElementFactory(...elements) {
+export function createNestedElements(...elements) {
     const nestedElements = elements.reduce((a, b) => {
         let elementA;
         if(typeof a === 'string') {
